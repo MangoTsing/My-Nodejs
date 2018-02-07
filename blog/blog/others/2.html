@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>继承</title>
+</head>
+<body>
+<script>
+	//原型链
+	function Supertype(){
+		this.property=true;
+	}
+	Supertype.prototype.getSuperValue=function(){
+		return this.property;
+	}
+	function Subtype(){
+		this.sgyp=false;
+	}
+	Subtype.prototype=new Supertype();
+	Subtype.prototype.getSubValue=function(){
+		return this.sgyp;
+	}
+	function Person(){}
+	var instance=new Subtype();
+	alert(instance.getSuperValue());
+	alert(instance.getSubValue());
+	alert(instance instanceof Person);
+
+</script>
+</body>
+</html>

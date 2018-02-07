@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	function Person(name,age,gender){
+	this.name=name;
+	this.age=age;
+	this.gender=gender;
+	this.friend=["salli","sgyp"];
+	
+}
+Person.prototype={
+	constructor:Person,
+	sayName:function(){
+		alert(this.name);
+	}
+}
+var person1=new Person('sgyp1','21','man');
+//alert(person1.friend);
+person1.friend.push('1');
+//alert(person1.friend);
+
+var person=new Person('sgyp','20','boy');
+//alert(person.friend);
+//alert(person.name);
+//person.sayName();
+function Person1(name,age,gender){
+	var o =new Object();
+	o.name=name;
+	o.age=age;
+	o.gender=gender;
+	o.sayName=function(){
+		alert(this.age);
+	}
+	return o;
+}
+var friend=new Person1('sgyp11','22','manman');
+friend.sayName();
+//
+//构造函数模式和原型模式以及寄生构造函数模式
+</script>
+</html>
